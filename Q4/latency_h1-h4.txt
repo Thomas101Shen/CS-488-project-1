@@ -1,0 +1,22 @@
+64 bytes from 10.0.0.4: icmp_seq=304 ttl=64 time=162 ms
+64 bytes from 10.0.0.4: icmp_seq=305 ttl=64 time=165 ms
+64 bytes from 10.0.0.4: icmp_seq=306 ttl=64 time=164 ms
+64 bytes from 10.0.0.4: icmp_seq=307 ttl=64 time=166 ms
+64 bytes from 10.0.0.4: icmp_seq=308 ttl=64 time=165 ms
+64 bytes from 10.0.0.4: icmp_seq=309 ttl=64 time=163 ms
+64 bytes from 10.0.0.4: icmp_seq=310 ttl=64 time=165 ms
+64 bytes from 10.0.0.4: icmp_seq=311 ttl=64 time=164 ms
+64 bytes from 10.0.0.4: icmp_seq=312 ttl=64 time=164 ms
+64 bytes from 10.0.0.4: icmp_seq=313 ttl=64 time=164 ms
+64 bytes from 10.0.0.4: icmp_seq=314 ttl=64 time=164 ms
+64 bytes from 10.0.0.4: icmp_seq=315 ttl=64 time=164 ms
+64 bytes from 10.0.0.4: icmp_seq=316 ttl=64 time=165 ms
+64 bytes from 10.0.0.4: icmp_seq=317 ttl=64 time=165 ms
+64 bytes from 10.0.0.4: icmp_seq=318 ttl=64 time=164 ms
+64 bytes from 10.0.0.4: icmp_seq=319 ttl=64 time=164 ms
+64 bytes from 10.0.0.4: icmp_seq=320 ttl=64 time=164 ms
+64 bytes from 10.0.0.4: icmp_seq=321 ttl=64 time=164 ms
+^C
+--- 10.0.0.4 ping statistics ---
+322 packets transmitted, 321 received, 0% packet loss, time 321323ms
+rtt min/avg/max/mdev = 161.194/163.825/166.057/0.960 ms
