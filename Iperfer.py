@@ -1,5 +1,3 @@
-package edu.pace.cs242.shen;
-
 import edu.pace.cs242.Metrics;
 import edu.pace.cs242.StackException;
 
