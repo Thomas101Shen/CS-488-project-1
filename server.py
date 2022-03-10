@@ -20,14 +20,11 @@ client_socket, addr =serverSocket.accept();
 #beyond this point, connection is established,
 #and return value client_socket is the server end's handle
 #of this socket for communicating payload
-while True:
-  #receive a message from client
-  message=client_socket.recv(2048);
+while client_socket.recv(2048):
   #process the message
 #checking if message is a legit format
   #parse the http request header
   
-  modified_message = message.upper()
   #send the modified message
   client_socket.send(modified_message)
   print("reply sent")
