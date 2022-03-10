@@ -14,8 +14,8 @@ if __name__ == "__main__":
 	if len(sys.argv) != 4:
 		print('Error: missing or additional arguments')
 	server_hostname = sys.argv[1]
-	server_port = sys.argv[2]
-	execution_time = sys.argv[3]
+	server_port = int(sys.argv[2])
+	execution_time = int(sys.argv[3])
 	if server_port < 1024 or server_port > 656535:
 		print('Error: port number must be in the range 1024 to 65535')
 		sys.exit()
@@ -25,6 +25,7 @@ if __name__ == "__main__":
 # Keep a running total of the number of bytes sent.
 	server_address = (server_hostname, server_port)
 	client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	#error catch
 	client_socket.connect(server_address)
 	data = b"0" * 1000
 	bytes_sent = 0
@@ -32,8 +33,11 @@ if __name__ == "__main__":
 	while True:
 		if time.time() > timeout:
 			break
-		client_socket.send(data)
+		client_socket.send(data.encode('utf-8'))
 		bytes_sent += 1000
-	client_socket.close()
+		# Receive from server
+        PacketByte = bytes(clientSocket.recvfrom(2048))
 
-  
+        # Print received message
+        print("From server:", PacketByte)
+	client_socket.close()
