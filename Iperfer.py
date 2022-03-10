@@ -30,17 +30,21 @@ if __name__ == "__main__":
 		data = b"0" * 1000
 		bytes_sent = 0
 		timeout = time.time() + execution_time
+		times_sent = 0
 		while True:
 			if time.time() > timeout:
 				break
 			client_socket.send(data)
 			bytes_sent += 1000
+			times_sent += 1
 			# Receive from server
 # 	        PacketByte = bytes(client_socket.recvfrom(2048))
-
+			print("message sent")
 	        # Print received message
 # 	        print("From server:", PacketByte)
+		print("finished")
 		client_socket.close()
-		print(bytes_sent/execution_time)
+		bytes_sent = bytes_sent/execution_time
+		print(bytes_sent/125000, "Mbps")
 	except socket.error as err: print(err)
 
