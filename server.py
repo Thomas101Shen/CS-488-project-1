@@ -26,8 +26,7 @@ while client_socket.recv(2048):
   #parse the http request header
   
   #send the modified message
-  client_socket.send(modified_message)
-  print("reply sent")
+  print("receiving packet")
     #set up a sentinel value, EOF, or -1
 
 client_socket.close()
