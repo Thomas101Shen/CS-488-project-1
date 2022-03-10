@@ -7,7 +7,7 @@ serverName = 'localhost'
 #reserved address for local in python
 serverAddress = (serverName, serverPort)
 
-serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM);
+serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #there are different types of sockets we can request
 #tcp vs. udp
 serverSocket.bind(serverAddress)
@@ -16,7 +16,7 @@ serverSocket.listen(1)
 
 #some message for possible debugging:
 print("server is listening")
-client_socket, addr =serverSocket.accept();
+client_socket, addr =serverSocket.accept()
 #beyond this point, connection is established,
 #and return value client_socket is the server end's handle
 #of this socket for communicating payload
