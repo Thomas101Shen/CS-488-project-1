@@ -42,3 +42,4 @@ if __name__ == "__main__":
 	        print("From server:", PacketByte)
 		client_socket.close()
 	except socket.error as err: print(err)
+
