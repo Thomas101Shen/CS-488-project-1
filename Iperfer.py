@@ -36,10 +36,11 @@ if __name__ == "__main__":
 			client_socket.send(data)
 			bytes_sent += 1000
 			# Receive from server
-	        PacketByte = bytes(client_socket.recvfrom(2048))
+# 	        PacketByte = bytes(client_socket.recvfrom(2048))
 
 	        # Print received message
-	        print("From server:", PacketByte)
+# 	        print("From server:", PacketByte)
 		client_socket.close()
+		print(bytes_sent/execution_time)
 	except socket.error as err: print(err)
 
