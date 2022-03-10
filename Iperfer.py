@@ -25,19 +25,20 @@ if __name__ == "__main__":
 # Keep a running total of the number of bytes sent.
 	server_address = (server_hostname, server_port)
 	client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	#error catch
-	client_socket.connect(server_address)
-	data = b"0" * 1000
-	bytes_sent = 0
-	timeout = time.time() + execution_time
-	while True:
-		if time.time() > timeout:
-			break
-		client_socket.send(data.encode('utf-8'))
-		bytes_sent += 1000
-		# Receive from server
-        PacketByte = bytes(clientSocket.recvfrom(2048))
+	try:
+		client_socket.connect(server_address)
+		data = b"0" * 1000
+		bytes_sent = 0
+		timeout = time.time() + execution_time
+		while True:
+			if time.time() > timeout:
+				break
+			client_socket.send(data.encode('utf-8'))
+			bytes_sent += 1000
+			# Receive from server
+	        PacketByte = bytes(clientSocket.recvfrom(2048))
 
-        # Print received message
-        print("From server:", PacketByte)
-	client_socket.close()
+	        # Print received message
+	        print("From server:", PacketByte)
+		client_socket.close()
+	except socket.error as err: print(err)
