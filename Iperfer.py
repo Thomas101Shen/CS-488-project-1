@@ -33,7 +33,7 @@ if __name__ == "__main__":
 		while True:
 			if time.time() > timeout:
 				break
-			client_socket.send(data.encode('utf-8'))
+			client_socket.send(data)
 			bytes_sent += 1000
 			# Receive from server
 	        PacketByte = bytes(clientSocket.recvfrom(2048))
