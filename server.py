@@ -2,7 +2,7 @@ import socket
 #import a library called socket
 
 #address of server we would like to listen
-serverPort = 1234
+serverPort = 23120
 serverName = 'localhost'
 #reserved address for local in python
 serverAddress = (serverName, serverPort)
