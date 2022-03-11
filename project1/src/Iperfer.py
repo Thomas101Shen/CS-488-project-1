@@ -39,7 +39,7 @@ if __name__ == "__main__":
 			times_sent += 1
 			# Receive from server
 # 	        PacketByte = bytes(client_socket.recvfrom(2048))
-			print("message sent")
+			#print("message sent")
 	        # Print received message
 # 	        print("From server:", PacketByte)
 		print("finished")
