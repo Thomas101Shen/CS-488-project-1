@@ -42,9 +42,9 @@ if __name__ == "__main__":
 			#print("message sent")
 	        # Print received message
 # 	        print("From server:", PacketByte)
-		print("finished")
+		#print("finished")
 		client_socket.close()
 		bytes_sent = bytes_sent/execution_time
-		print(bytes_sent/125000, "Mbps")
+		print("sent =", bytes_sent/1000, "Kbps", "rate =", bytes_sent/125000, "Mbps")
 	except socket.error as err: print(err)
 
