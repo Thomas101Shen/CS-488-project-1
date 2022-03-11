@@ -3,7 +3,7 @@
 
 import sys
 import socket
-from mininet.cli import CLI
+#from mininet.cli import CLI
 import time
 # from mininet.net import Mininet
 # from mininet.link import TCLink
