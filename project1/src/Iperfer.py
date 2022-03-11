@@ -16,7 +16,7 @@ if __name__ == "__main__":
 	server_hostname = sys.argv[1]
 	server_port = int(sys.argv[2])
 	execution_time = int(sys.argv[3])
-	if server_port < 1024 or server_port > 656535:
+	if server_port < 1024 or server_port > 65535:
 		print('Error: port number must be in the range 1024 to 65535')
 		sys.exit()
 # Iperfer must establish a TCP connection with the server and
